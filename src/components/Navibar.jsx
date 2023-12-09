@@ -56,6 +56,7 @@ export default function Navibar() {
           <Logo>Digi-Shopee</Logo>
         </Center>
         <Right>
+          <SmLogo>Login</SmLogo>
           <SmLogo>Register</SmLogo>
           <SmLogo>Cart</SmLogo>
           <SmLogo>
