@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
@@ -56,6 +57,7 @@ export default function Navibar() {
           <Logo>Digi-Shopee</Logo>
         </Center>
         <Right>
+          <SmLogo>Login</SmLogo>
           <SmLogo>Register</SmLogo>
           <SmLogo>Cart</SmLogo>
           <SmLogo>
