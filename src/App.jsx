@@ -21,7 +21,9 @@ const App = () => {
         <ProductList />
         </Route>
       </Switch>
+      <Home/>
     </Router>
+
   )
 }
 
