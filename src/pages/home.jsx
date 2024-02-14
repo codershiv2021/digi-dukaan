@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Navbar from "../components/Navibar";
 import Slider from "../components/slider";
 import Announcement from "../components/Announcement";
@@ -22,4 +22,4 @@ const Home = () => {
   )
 };
 
-export default Home
+export default Home;
