@@ -10,7 +10,6 @@ position: relative;
 const Image= styled.img`
 width: 100%;
 height: 100%;
-
 object-fit: cover;
 `
 const Info= styled.div`
@@ -42,7 +41,7 @@ export default function Categoryitem({item}) {
 
   return (
       <Container >
-            <Link to= {'/products/${item.cat}' }>
+            <Link to= {'/products' }>
             <Image src= {item.img}/>
             <Info>
                   <Title>{item.title}</Title>

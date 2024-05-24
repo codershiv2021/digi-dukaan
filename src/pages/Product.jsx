@@ -3,6 +3,9 @@ import Footer from "../components/footer";
 import Announcement from "../components/Announcement";
 import Navibar from "../components/Navibar";
 import Newsletter from "../components/Newsletter";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { postsContext } from "../context/PosstContextWrapper";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -109,6 +112,23 @@ const Button = styled.button`
 `;
 
 const Product = () =>{
+  const { posts } = useContext(postsContext);
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const product = posts.find((post) => post._id === id);
+        setProduct(product);
+      } catch (err) {
+        console.error("Error fetching product:", err);
+      }
+    };
+    getProduct();
+  }, [id, posts]);
+
       return (
             <Container>
             <Navibar/>
@@ -118,18 +138,15 @@ const Product = () =>{
             <Image src={product.img} />
             </ImgContainer>
             <InfoContainer>
-              <Title>Denim Jumpsuit</Title>
+              <Title>{product.title}</Title>
                 <Desc>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit corporis corrupti? Dolor vitae nesciunt mollitia hic numquam. Recusandae est deleniti vero rerum doloribus praesentium accusamus eligendi ut illum repellat?
+                  {product.desc}
                 </Desc>
-                
             </InfoContainer>
             </Wrapper>
             <Footer/>
             <Newsletter/>
             </Container>
-
-
-
       );
 }
+export default Product;

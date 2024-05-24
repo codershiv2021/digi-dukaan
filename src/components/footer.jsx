@@ -1,4 +1,4 @@
-import { Payment,Room, MailOutline,Facebook, Instagram, Phone, Pinterest, Twitter } from "@material-ui/icons";
+import {Room, MailOutline,Facebook, Instagram, Phone, Pinterest, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -34,8 +34,8 @@ const Desc = styled.div`
 const Iconcoll= styled.div`
 display: flex;
 `
-const Iconnear= styled.div`
-`
+// const Iconnear= styled.div`
+// `
 const ContactItem= styled.div`
 margin-bottom: 20px;
 display: flex;
